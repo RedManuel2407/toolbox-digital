@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolBox.digital – Kostenlose Online-Tools | Passwort Generator, JSON Formatter & mehr</title>
+    <meta name="description"
+        content="Kostenlose Online-Tools für Entwickler, Designer & Creator. Passwort Generator, Farbpaletten, Text-Tools, Einheiten-Konverter, JSON Formatter – alles direkt im Browser.">
+    <meta name="keywords"
+        content="online tools, passwort generator, json formatter, farbpalette, einheiten umrechner, text tools, kostenlos, free, password generator, color palette, unit converter">
+    <meta name="author" content="ToolBox.digital">
+    <meta name="robots" content="index, follow">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ToolBox.digital – Free Online Tools">
+    <meta property="og:description" content="Free online tools for developers, designers & creators.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Header -->
+    <header id="main-header">
+        <div class="header-inner">
+            <a href="#" class="logo" id="logo-link">
+                <div class="logo-icon">
+                    <i data-lucide="boxes" class="logo-lucide"></i>
+                </div>
+                <span class="logo-text">ToolBox<span class="logo-dot">.digital</span></span>
+            </a>
+            <nav class="nav-links" id="main-nav">
+                <a href="#tools" class="nav-link" data-i18n="nav.tools">Tools</a>
+                <a href="#features" class="nav-link" data-i18n="nav.features">Features</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">Über uns</a>
+            </nav>
+            <div class="header-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Sprache wechseln"
+                    title="Switch to English">EN</button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Theme wechseln">
+                    <i data-lucide="moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i data-lucide="sparkles"></i>
+                <span data-i18n="hero.badge">100% Kostenlos & Ohne Registrierung</span>
+            </div>
+            <h1 class="hero-title">
+                <span data-i18n="hero.title.1">Deine </span><span class="gradient-text"
+                    data-i18n="hero.title.highlight">Online-Tools</span><br>
+                <span data-i18n="hero.title.2">immer griffbereit.</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+                Professionelle Tools für Entwickler, Designer & Creator.
+                Alles läuft direkt in deinem Browser – schnell, sicher & privat.
+            </p>
+            <div class="hero-actions">
+                <a href="#tools" class="btn btn-primary" id="cta-tools">
+                    <i data-lucide="rocket"></i>
+                    <span data-i18n="hero.cta.tools">Tools entdecken</span>
+                </a>
+                <a href="#features" class="btn btn-secondary" id="cta-features">
+                    <span data-i18n="hero.cta.more">Mehr erfahren</span>
+                    <i data-lucide="arrow-down"></i>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label" data-i18n="hero.stats.tools">Tools</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">0€</span>
+                    <span class="stat-label" data-i18n="hero.stats.cost">Kosten</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label" data-i18n="hero.stats.private">Privat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section" id="tools">
+        <div class="section-header">
+            <span class="section-badge" data-i18n="tools.badge">Unsere Tools</span>
+            <h2 class="section-title" data-i18n="tools.title">Alles was du brauchst</h2>
+            <p class="section-subtitle" data-i18n="tools.subtitle">Wähle ein Tool und leg sofort los – keine
+                Installation nötig.</p>
+        </div>
+
+        <div class="tools-grid" id="tools-grid">
+            <!-- Tool Cards werden per JS generiert -->
+        </div>
+    </section>
+
+    <!-- Active Tool Area -->
+    <section class="tool-workspace" id="tool-workspace" style="display:none;">
+        <div class="workspace-header">
+            <button class="btn-back" id="btn-back">
+                <i data-lucide="arrow-left"></i>
+                <span data-i18n="tools.back">Zurück zu allen Tools</span>
+            </button>
+            <h2 class="workspace-title" id="workspace-title"></h2>
+        </div>
+        <div class="workspace-body" id="workspace-body">
+            <!-- Tool UI wird hier dynamisch geladen -->
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="section-header">
+            <span class="section-badge" data-i18n="features.badge">Warum ToolBox?</span>
+            <h2 class="section-title" data-i18n="features.title">Features die überzeugen</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon" style="--accent: #6366f1;">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3 data-i18n="features.fast.title">Blitzschnell</h3>
+                <p data-i18n="features.fast.desc">Alle Tools laufen direkt in deinem Browser – kein Server, keine
+                    Wartezeit.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="--accent: #8b5cf6;">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3 data-i18n="features.private.title">100% Privat</h3>
+                <p data-i18n="features.private.desc">Deine Daten verlassen niemals deinen Browser. Keine Uploads, keine
+                    Logs.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="--accent: #ec4899;">
+                    <i data-lucide="smartphone"></i>
+                </div>
+                <h3 data-i18n="features.mobile.title">Mobile Ready</h3>
+                <p data-i18n="features.mobile.desc">Perfekt optimiert für alle Geräte – nutze deine Tools überall.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon" style="--accent: #14b8a6;">
+                    <i data-lucide="infinity"></i>
+                </div>
+                <h3 data-i18n="features.unlimited.title">Unbegrenzt</h3>
+                <p data-i18n="features.unlimited.desc">Keine Limits, keine versteckten Kosten. Alle Tools sind dauerhaft
+                    kostenlos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-card">
+            <div class="about-content">
+                <span class="section-badge" data-i18n="about.badge">Über ToolBox.digital</span>
+                <h2 class="section-title" data-i18n="about.title" data-i18n-html="true">Von Entwicklern,<br>für alle.
+                </h2>
+                <p data-i18n="about.desc.1">Wir glauben, dass professionelle Online-Tools kostenlos und für jeden
+                    zugänglich sein sollten.
+                    ToolBox.digital ist ein Open-Source-Projekt, das ständig wächst.</p>
+                <p data-i18n="about.desc.2">Jedes Tool wird mit Liebe zum Detail entwickelt und ist darauf ausgelegt,
+                    dir Zeit zu sparen und
+                    deinen Workflow zu verbessern.</p>
+            </div>
+            <div class="about-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">toolbox.js</span>
+                    </div>
+                    <pre class="code-body"><code><span class="code-keyword">const</span> toolbox = {
+  tools: <span class="code-number">5</span>,
+  cost: <span class="code-string">"free"</span>,
+  privacy: <span class="code-boolean">true</span>,
+  
+  <span class="code-function">generate</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">"✨ Magic!"</span>;
+  }
+};</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-icon small">
+                        <i data-lucide="boxes"></i>
+                    </div>
+                    <span class="logo-text">ToolBox<span class="logo-dot">.digital</span></span>
+                </div>
+                <p class="footer-desc" data-i18n="footer.desc">Kostenlose Online-Tools für deinen Alltag.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.tools">Tools</h4>
+                    <a href="#" onclick="openTool('password')" data-i18n="pw.name">Passwort Generator</a>
+                    <a href="#" onclick="openTool('colors')" data-i18n="colors.name">Farbpalette</a>
+                    <a href="#" onclick="openTool('text')" data-i18n="text.name">Text Tools</a>
+                    <a href="#" onclick="openTool('converter')" data-i18n="conv.name">Konverter</a>
+                    <a href="#" onclick="openTool('json')" data-i18n="json.name">JSON Formatter</a>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.legal">Rechtliches</h4>
+                    <a href="impressum.html" data-i18n="footer.imprint">Impressum</a>
+                    <a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a>
+                    <a href="agb.html" data-i18n="footer.terms">AGB</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ToolBox.digital – <span data-i18n="footer.bottom">Mit ❤️ gebaut.</span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="i18n.js"></script>
+    <script src="tools/password.js"></script>
+    <script src="tools/colors.js"></script>
+    <script src="tools/text.js"></script>
+    <script src="tools/converter.js"></script>
+    <script src="tools/json.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
