@@ -198,6 +198,23 @@ const TRANSLATIONS = {
     'json.keys': { de: 'Schlüssel', en: 'Keys' },
     'json.type': { de: 'Typ', en: 'Type' },
 
+    // ============ TOOL: QR CODE ============
+    'qr.name': { de: 'QR-Code Generator', en: 'QR Code Generator' },
+    'qr.desc': { de: 'Erstelle QR-Codes für Links, Texte und mehr – mit individuellen Farben.', en: 'Create QR codes for links, texts and more – with custom colors.' },
+    'qr.tags.1': { de: 'Generator', en: 'Generator' },
+    'qr.tags.2': { de: 'QR-Code', en: 'QR Code' },
+    'qr.input': { de: 'Text oder URL', en: 'Text or URL' },
+    'qr.placeholder': { de: 'URL, Text, E-Mail oder Telefonnummer eingeben...', en: 'Enter URL, text, email or phone number...' },
+    'qr.size': { de: 'Größe', en: 'Size' },
+    'qr.fgColor': { de: 'Vordergrund-Farbe', en: 'Foreground Color' },
+    'qr.bgColor': { de: 'Hintergrund-Farbe', en: 'Background Color' },
+    'qr.errorLevel': { de: 'Fehlerkorrektur-Level', en: 'Error Correction Level' },
+    'qr.preview': { de: 'Vorschau', en: 'Preview' },
+    'qr.download': { de: 'Als PNG herunterladen', en: 'Download as PNG' },
+    'qr.copy': { de: 'In Zwischenablage', en: 'Copy to Clipboard' },
+    'qr.downloaded': { de: 'QR-Code heruntergeladen!', en: 'QR code downloaded!' },
+    'qr.error': { de: 'Text zu lang für QR-Code', en: 'Text too long for QR code' },
+
     // ============ SHARED ============
     'copy.success': { de: 'In Zwischenablage kopiert!', en: 'Copied to clipboard!' },
     'css.copied': { de: 'CSS in Zwischenablage kopiert!', en: 'CSS copied to clipboard!' },

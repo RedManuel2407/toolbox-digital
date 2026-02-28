@@ -31,6 +31,7 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -94,7 +95,7 @@
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">5+</span>
+                    <span class="stat-number">6+</span>
                     <span class="stat-label" data-i18n="hero.stats.tools">Tools</span>
                 </div>
                 <div class="stat-divider"></div>
@@ -236,6 +237,7 @@
                     <a href="#" onclick="openTool('text')" data-i18n="text.name">Text Tools</a>
                     <a href="#" onclick="openTool('converter')" data-i18n="conv.name">Konverter</a>
                     <a href="#" onclick="openTool('json')" data-i18n="json.name">JSON Formatter</a>
+                    <a href="#" onclick="openTool('qrcode')" data-i18n="qr.name">QR-Code Generator</a>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="footer.legal">Rechtliches</h4>
@@ -257,6 +259,7 @@
     <script src="tools/text.js"></script>
     <script src="tools/converter.js"></script>
     <script src="tools/json.js"></script>
+    <script src="tools/qrcode.js"></script>
     <script src="app.js"></script>
 
     <!-- Vercel Analytics & Speed Insights (nur auf Vercel aktiv) -->

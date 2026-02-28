@@ -48,6 +48,15 @@ const TOOLS = [
         tagKeys: ['json.tags.1', 'json.tags.2'],
         accent: 'linear-gradient(135deg, #3b82f6, #60a5fa)',
         render: renderJsonTool
+    },
+    {
+        id: 'qrcode',
+        nameKey: 'qr.name',
+        descKey: 'qr.desc',
+        icon: '📱',
+        tagKeys: ['qr.tags.1', 'qr.tags.2'],
+        accent: 'linear-gradient(135deg, #10b981, #34d399)',
+        render: renderQRCodeTool
     }
 ];
 
