@@ -29,9 +29,5 @@
                 }
             ]
         }
-    ],
-    "analytics": true,
-    "speedInsights": {
-        "enabled": true
-    }
+    ]
 }
